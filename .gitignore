@@ -1,0 +1,14 @@
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Temp export artifacts (regenerated every run)
+screenshots/
+Retina *.dc.html
+Recollection *.jpg
+retina-check.jpg
+*.tmp
+
+# Editor
+.vscode/
+.idea/

@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 630" fill="none">
+  <!-- ================= BANYAN TREE ================= -->
+  <!-- canopy outline: loose overlapping cloud lobes -->
+  <g stroke="#1F4A39" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118 178 C96 166 92 138 112 124 C104 100 128 78 156 84 C158 58 192 44 216 58 C228 32 272 26 292 48 C308 24 352 22 372 44 C392 20 440 24 452 50 C480 34 520 46 524 74 C552 66 582 86 578 112 C606 116 618 146 600 164 C616 182 604 210 578 212"/>
+    <path d="M140 190 C120 196 100 188 96 172"/>
+    <path d="M170 120 C176 100 200 92 218 100"/>
+    <path d="M300 60 C316 44 344 44 358 58"/>
+    <path d="M470 66 C490 54 516 60 524 78"/>
+    <!-- canopy underside: gentle scallops, stopping at the trunk -->
+    <path d="M122 182 C144 202 172 206 194 196"/>
+    <path d="M208 202 C232 218 264 218 286 204"/>
+    <path d="M300 212 C324 228 358 226 378 210"/>
+    <path d="M394 216 C414 226 432 226 446 218"/>
+    <path d="M500 216 C522 226 548 222 564 208"/>
+    <path d="M576 208 C592 204 600 192 598 178"/>
+  </g>
+  <!-- foliage: loopy leaf-cluster scribbles -->
+  <g stroke="#1F4A39" stroke-width="1.1" stroke-linecap="round" opacity="0.55">
+    <path d="M156 138 c6 -10 16 -10 18 -2 c2 7 -8 11 -12 5 c-3 -5 4 -12 12 -10"/>
+    <path d="M226 96 c6 -10 16 -10 18 -2 c2 7 -8 11 -12 5 c-3 -5 4 -12 12 -10"/>
+    <path d="M310 72 c6 -10 16 -10 18 -2 c2 7 -8 11 -12 5 c-3 -5 4 -12 12 -10"/>
+    <path d="M408 78 c6 -10 16 -10 18 -2 c2 7 -8 11 -12 5 c-3 -5 4 -12 12 -10"/>
+    <path d="M492 108 c6 -10 16 -10 18 -2 c2 7 -8 11 -12 5 c-3 -5 4 -12 12 -10"/>
+    <path d="M540 156 c6 -10 16 -10 18 -2 c2 7 -8 11 -12 5 c-3 -5 4 -12 12 -10"/>
+    <path d="M256 152 c6 -10 16 -10 18 -2 c2 7 -8 11 -12 5 c-3 -5 4 -12 12 -10"/>
+    <path d="M352 140 c6 -10 16 -10 18 -2 c2 7 -8 11 -12 5 c-3 -5 4 -12 12 -10"/>
+    <path d="M448 158 c6 -10 16 -10 18 -2 c2 7 -8 11 -12 5 c-3 -5 4 -12 12 -10"/>
+    <path d="M196 172 c5 -8 13 -8 15 -2 c1 6 -7 9 -10 4 c-2 -4 3 -10 10 -8"/>
+    <path d="M312 178 c5 -8 13 -8 15 -2 c1 6 -7 9 -10 4 c-2 -4 3 -10 10 -8"/>
+    <path d="M520 184 c5 -8 13 -8 15 -2 c1 6 -7 9 -10 4 c-2 -4 3 -10 10 -8"/>
+  </g>
+  <!-- canopy underside hatching (shade) -->
+  <g stroke="#1F4A39" stroke-width="1" opacity="0.5">
+    <path d="M206 188 l14 -10 M228 192 l14 -10 M250 194 l14 -10 M272 196 l14 -10"/>
+    <path d="M312 200 l14 -10 M334 204 l14 -10 M356 204 l14 -10"/>
+    <path d="M402 206 l14 -10 M424 208 l14 -10"/>
+    <path d="M506 204 l14 -10 M528 202 l14 -10"/>
+  </g>
+  <!-- copper leaf accents + falling leaves -->
+  <g stroke="#B06E2E" stroke-width="1.4" stroke-linecap="round" opacity="0.85">
+    <path d="M198 122 c5 -8 13 -8 15 -2 c1 6 -7 9 -10 4"/>
+    <path d="M372 104 c5 -8 13 -8 15 -2 c1 6 -7 9 -10 4"/>
+    <path d="M478 146 c5 -8 13 -8 15 -2 c1 6 -7 9 -10 4"/>
+    <path d="M282 258 c4 -7 11 -7 13 -2 c1 5 -6 8 -9 3 M290 254 l-4 10"/>
+    <path d="M366 292 c4 -7 11 -7 13 -2 c1 5 -6 8 -9 3"/>
+  </g>
+
+  <!-- limbs disappearing into the canopy -->
+  <g stroke="#10362A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M446 254 C440 228 414 206 378 196 C360 191 342 190 328 192"/>
+    <path d="M488 252 C496 224 520 204 548 196"/>
+    <path d="M452 246 C452 226 448 208 438 196"/>
+  </g>
+
+  <!-- trunk: single sturdy bole with buttress flares -->
+  <g stroke="#10362A" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M446 254 C448 300 446 352 440 398 C436 436 428 470 414 500"/>
+    <path d="M488 252 C490 300 492 350 496 394 C500 434 508 472 522 500"/>
+    <path d="M414 500 C404 508 390 513 378 514"/>
+    <path d="M522 500 C532 509 546 514 558 515"/>
+  </g>
+  <g stroke="#1F4A39" stroke-width="1.5" stroke-linecap="round">
+    <path d="M458 266 C458 316 456 366 451 408 C448 440 442 468 432 492"/>
+    <path d="M474 268 C476 318 478 368 482 408 C485 440 491 468 501 492"/>
+    <path d="M446 452 C440 472 430 490 418 502"/>
+    <path d="M492 456 C498 476 508 492 520 502"/>
+  </g>
+  <!-- trunk hatching, shaded right side -->
+  <g stroke="#1F4A39" stroke-width="1" opacity="0.55">
+    <path d="M482 300 l11 -7 M484 322 l11 -7 M486 344 l11 -7 M488 366 l11 -7 M490 388 l11 -7 M493 410 l11 -7 M497 432 l11 -7 M502 454 l11 -7 M509 476 l11 -7"/>
+  </g>
+
+  <!-- prop-root pillar right of the trunk: wavy strands reaching the ground -->
+  <g stroke="#1F4A39" stroke-width="1.8" stroke-linecap="round">
+    <path d="M548 200 C544 240 550 290 546 340 C543 396 548 462 552 504"/>
+    <path d="M558 202 C556 248 562 300 558 352 C556 404 560 466 564 504"/>
+    <path d="M604 186 C602 236 606 300 602 360 C600 416 604 468 606 502"/>
+    <path d="M552 504 C546 509 538 512 530 513 M564 504 C570 509 578 512 586 513 M606 502 C612 507 618 510 624 511"/>
+  </g>
+  <!-- short aerial roots dangling left of the trunk -->
+  <g stroke="#1F4A39" stroke-width="1.5" stroke-linecap="round">
+    <path d="M382 214 C379 236 382 260 379 284 C378 300 380 314 379 326"/>
+    <path d="M336 208 C333 226 336 244 333 262 C332 274 334 284 333 292"/>
+  </g>
+  <g stroke="#1F4A39" stroke-width="1" opacity="0.6">
+    <path d="M548 280 l12 -4 M550 360 l12 -4 M552 440 l12 -4"/>
+    <path d="M598 260 l10 -4 M600 350 l10 -4 M602 440 l10 -4"/>
+  </g>
+
+  <!-- ================= BECAK (cycle rickshaw) ================= -->
+  <!-- front (passenger) wheel -->
+  <g stroke="#10362A" stroke-width="2.4">
+    <circle cx="145" cy="472" r="52"/>
+    <circle cx="145" cy="472" r="46" stroke-width="1.3"/>
+  </g>
+  <g stroke="#1F4A39" stroke-width="1.1">
+    <path d="M145 426 L145 518 M99 472 L191 472 M112 439 L178 505 M112 505 L178 439"/>
+  </g>
+  <circle cx="145" cy="472" r="6" stroke="#B06E2E" stroke-width="2"/>
+
+  <!-- rear (driver) wheel -->
+  <g stroke="#10362A" stroke-width="2.2">
+    <circle cx="345" cy="480" r="42"/>
+    <circle cx="345" cy="480" r="36.5" stroke-width="1.2"/>
+  </g>
+  <g stroke="#1F4A39" stroke-width="1">
+    <path d="M345 443 L345 517 M308 480 L382 480 M319 454 L371 506 M319 506 L371 454"/>
+  </g>
+  <circle cx="345" cy="480" r="5.5" stroke="#B06E2E" stroke-width="2"/>
+
+  <!-- cab silhouette: footwell, bench and backrest (paper fill to sit in front) -->
+  <path d="M128 430 L122 466 L298 462 L306 380 C304 376 298 376 294 378 L288 426 L184 430 Z"
+        fill="#F7F3E7" stroke="#10362A" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M126 448 L294 444" stroke="#1F4A39" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- hood folded down behind the backrest -->
+  <g stroke="#10362A" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M306 382 C318 372 330 372 338 380 C344 386 344 396 338 402"/>
+    <path d="M308 390 C318 382 328 383 334 390 C338 395 337 402 332 406"/>
+  </g>
+
+  <!-- saddle, frame and pedals behind the cab -->
+  <g stroke="#10362A" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M298 462 L322 474 L345 480"/>
+    <path d="M304 420 L330 416 L328 474"/>
+    <path d="M322 412 C328 407 340 407 346 412"/>
+  </g>
+  <circle cx="322" cy="474" r="6" stroke="#1F4A39" stroke-width="1.5" fill="none"/>
+  <path d="M317 485 L311 491 M327 463 L333 457" stroke="#1F4A39" stroke-width="1.7" stroke-linecap="round"/>
+
+  <!-- ============ DRIVER, napping in the passenger seat ============ -->
+  <g stroke="#10362A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- torso settled into the backrest corner -->
+    <path d="M262 424 C270 412 278 400 284 388"/>
+    <path d="M274 426 C281 415 288 404 293 394"/>
+    <!-- arm resting down to the lap -->
+    <path d="M286 398 C282 406 274 412 266 415"/>
+    <!-- hands clasped on the belly -->
+    <path d="M262 414 C256 418 250 419 245 417 C241 415 242 410 247 409"/>
+    <!-- legs: knees up, feet propped on the front lip -->
+    <path d="M260 426 L192 400 L142 428"/>
+    <path d="M268 430 L202 408 L150 436"/>
+    <path d="M142 428 L134 424 M150 436 L142 436"/>
+  </g>
+  <!-- conical hat tipped over the face -->
+  <g stroke="#10362A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M238 376 L266 342 L294 390 Z" fill="#F7F3E7"/>
+    <path d="M238 376 C252 386 280 392 294 390" fill="none"/>
+  </g>
+  <path d="M245 376 L267 350" stroke="#B06E2E" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- chin and chest under the brim -->
+  <path d="M290 394 C286 398 280 400 274 399" stroke="#10362A" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+
+  <!-- ================= GROUND ================= -->
+  <g stroke="#1F4A39" stroke-width="1.6" stroke-linecap="round">
+    <path d="M62 528 C140 522 240 524 320 526"/>
+    <path d="M356 528 C430 530 520 528 606 522"/>
+    <path d="M96 544 L180 544 M228 548 L316 546 M400 546 L470 546 M508 542 L560 540"/>
+  </g>
+  <!-- grass tufts -->
+  <g stroke="#1F4A39" stroke-width="1.3" stroke-linecap="round">
+    <path d="M84 526 q2 -10 6 -12 M90 526 q1 -7 5 -9 M96 526 q-1 -9 -5 -12"/>
+    <path d="M250 524 q2 -10 6 -12 M256 524 q1 -7 5 -9 M262 524 q-1 -9 -5 -12"/>
+    <path d="M470 522 q2 -10 6 -12 M476 522 q1 -7 5 -9 M482 522 q-1 -9 -5 -12"/>
+    <path d="M612 518 q2 -10 6 -12 M618 518 q1 -7 5 -9"/>
+  </g>
+  <!-- shadow hatching under tree and becak -->
+  <g stroke="#1F4A39" stroke-width="1" opacity="0.45">
+    <path d="M110 536 l14 -6 M136 538 l14 -6 M162 538 l14 -6 M188 538 l14 -6 M214 538 l14 -6 M240 538 l14 -6 M266 538 l14 -6 M292 538 l14 -6 M318 538 l14 -6 M344 540 l14 -6"/>
+    <path d="M392 534 l14 -6 M418 534 l14 -6 M444 534 l14 -6 M470 534 l14 -6 M496 532 l14 -6 M522 532 l14 -6 M548 530 l14 -6"/>
+  </g>
+  <!-- copper dappled-light spots -->
+  <g stroke="#B06E2E" stroke-width="1.2" opacity="0.7">
+    <ellipse cx="220" cy="552" rx="10" ry="3"/>
+    <ellipse cx="420" cy="554" rx="12" ry="3.5"/>
+    <ellipse cx="330" cy="558" rx="7" ry="2.5"/>
+    <ellipse cx="530" cy="550" rx="9" ry="3"/>
+  </g>
+</svg>

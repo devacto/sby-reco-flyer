@@ -6,12 +6,12 @@ Monthly "Evening of Recollection" flyer for Surabaya — an HTML design that exp
 
 | Path | Purpose |
 |---|---|
-| `Recollection Flyer.dc.html` | The flyer design (1080×1440). Source of truth — open in a browser to preview. |
+| `reco_flyer.dc.html` | The flyer design (1080×1440). Source of truth — open in a browser to preview. |
 | `assets/illustration.png` | Current artwork (statue + walking figure), blended into the flyer background. |
 | `assets/original.png` | The original reference flyer image. |
 | `support.js` | Runtime needed by the `.dc.html` design. Do not edit. |
 | `skills/recollection-flyer/SKILL.md` | The reusable recipe for generating next month's flyer. |
-| `Evening of Recollection.jpg` | Latest exported retina JPG. |
+| `reco_flyer.jpg` | Latest exported retina JPG. |
 
 ## How to generate next month's flyer
 
@@ -23,7 +23,7 @@ Monthly "Evening of Recollection" flyer for Surabaya — an HTML design that exp
    > Colors: deep green + ivory + copper. *(optional)*
    > Illustration: a becak driver resting under a banyan tree. *(optional — described in words, drawn in the same ink-sketch style)*
 
-3. Claude updates the date (and colors/illustration if given), verifies the layout, and delivers a fresh `Evening of Recollection.jpg`.
+3. Claude updates the date (and colors/illustration if given), verifies the layout, and delivers a fresh `reco_flyer.jpg`.
 
 Only the date changes by default — layout, typography, schedule, venue, and quote stay fixed unless explicitly requested.
 

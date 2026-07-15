@@ -3,7 +3,7 @@
 Generate the monthly "Evening of Recollection" flyer for Surabaya (1080×1440 design, delivered as a 2160×2880 retina JPG).
 
 ## Source of truth
-- `Recollection Flyer.dc.html` — the flyer design. ALL content stays exactly as-is except the parameters below.
+- `reco_flyer.dc.html` — the flyer design. ALL content stays exactly as-is except the parameters below.
 - `assets/illustration.png` — the artwork on the right of the schedule (blended into the background via multiply + edge mask).
 
 ## Parameters
@@ -40,7 +40,7 @@ The preview iframe is ~924×540, so capture by tiling a true-2× copy:
 3. Capture 18 HQ PNG tiles, ONE save_screenshot call per tile (multi-step scroll captures return stale tiles — do not batch):
    - x offsets: 0, 924, 1236; y offsets: 0, 540, 1080, 1620, 2160, 2340; `window.scrollTo(x,y)` with ~400ms delay.
 4. Stitch on canvas 2160×2880 (fill bg color first), draw each tile at its (x,y), export JPEG quality 0.95 to a **fresh timestamped filename**, then view to verify content (date, schedule, dividers, no seams).
-5. Copy/move to `Evening of Recollection.jpg`, delete temp 2× file and `screenshots/`, present for download.
+5. Copy/move to `reco_flyer.jpg`, delete temp 2× file and `screenshots/`, present for download.
 
 ## Known pitfalls
 - Filename reuse = stale cache (wrong image shown in viewer and captures). Always timestamp temp files.

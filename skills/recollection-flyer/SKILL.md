@@ -14,13 +14,14 @@ Generate the monthly "Evening of Recollection" flyer for Surabaya (1080×1440 de
    - Ink / headings: `#16264A`, `#1C2B4F`, body text `#27325A`, secondary `#34406A`
    - Accent (rules, icons, diamonds, SCHEDULE, subtitle, attribution): `#A8833C` and every `rgba(168,131,60,…)` (keep the same alphas)
    Keep contrast: dark ink on light bg; accent must read at 1px hairline weight. If user gives only 1–2 colors, derive the rest with oklch harmony rather than inventing unrelated hues.
-3. **illustration** (optional) — the user describes the scene IN WORDS (e.g. "a fisherman mending nets at a harbor at dawn"). Claude draws it as an inline SVG in the same visual style as the current artwork:
-   - Style: hand-sketched ink line drawing — loose, engraved/etched feel; no flat cartoon fills, no gradients-as-shading.
-   - Palette: ONLY the flyer's ink + accent colors (default navy `#27325A`/`#16264A` lines with gold `#A8833C` accents) on transparent background, so it sits on the cream bg like ink on paper.
-   - Composition: roughly square (~660×630 viewBox), one clear focal subject + minimal ground/context lines, generous whitespace; include a small human figure for scale where it fits the scene.
-   - Technique: build from stroked paths (varying stroke-width 1–3, round caps), cross-hatching for shadow, few or no filled shapes.
-   - Placement: replace the `<img>` with the SVG (or save as `assets/illustration.svg` and reference it) but KEEP the container's edge-fade mask styles so it blends into the flyer. Drop `mix-blend-mode:multiply` if the SVG has a transparent background (not needed).
-   - Iterate: screenshot the illustration region, eyeball it, refine paths 2–3 rounds before export. If the scene is too complex to draw convincingly (faces, crowds, detailed architecture), say so and propose a simpler composition or ask for a reference image instead.
+3. **illustration** (optional) — the user describes the scene IN WORDS (e.g. "a fisherman mending nets at a harbor at dawn"). Generate it with the **fal.ai MCP** using the **`fal-ai/nano-banana-2`** text-to-image model:
+   - Call `mcp__fal-ai__run_model` with `endpoint_id: "fal-ai/nano-banana-2"` and input `{aspect_ratio: "1:1", resolution: "2K", output_format: "png", num_images: 1}` plus the prompt below.
+   - Prompt template (swap in the scene and the flyer's CURRENT colors — read the ink, accent, and background hex values from `reco_flyer.dc.html` first; don't hardcode):
+     > Hand-sketched ink line drawing in a loose engraved / etched vintage style: {scene}. Built entirely from expressive stroked pen lines of varying weight with cross-hatching for shadows — no flat cartoon fills, no gradient shading, no photorealism. Ink color is {ink hex, e.g. deep forest green #173E30}, with a few subtle {accent hex, e.g. copper-bronze #B06E2E} accent strokes on small details. Plain solid warm cream paper background ({bg hex}), completely empty — no border, no frame. ABSOLUTELY NO text, letters, words, numbers, labels or signatures anywhere in the image; book spines, signs and screens must be blank or abstract line marks only. Single focal subject centered with generous whitespace around it, minimal ground/context lines only. Roughly square composition, like an ink illustration printed on cream paper.
+   - Download the returned image URL (curl) to the scratchpad, then Read it and eyeball: correct scene, ink-sketch style (no photorealism/flat fills), palette respected, and NO stray lettering anywhere (the model likes writing on book spines — regenerate with a firmer no-text clause if it does).
+   - Normalize the background: the model's cream is never exactly the flyer's. Divide each channel by the sampled corner background color so the paper becomes pure white (Pillow: `im.point(luts)` with `lut[v] = min(255, round(v * 255/bg[ch]))`), then verify corners are ~(255,255,255).
+   - Save as `assets/illustration.png`, point the `<img>` at it and **bump the `?v=` query** (viewers cache), set the alt text to the scene, and KEEP both `mix-blend-mode:multiply` (the white paper vanishes into the flyer bg) and the container's edge-fade mask styles.
+   - Verify the blend: multiply-composite the normalized image over the flyer bg color in Pillow and check the corners come out ≈ the flyer bg hex.
 
 Everything else — layout, typography (Cormorant Garamond + EB Garamond), schedule times/events, venue, quote — DOES NOT CHANGE unless explicitly requested.
 
@@ -31,7 +32,9 @@ Everything else — layout, typography (Cormorant Garamond + EB Garamond), sched
 - "HOLINESS IN THE MIDDLE OF THE WORLD" stays on one line.
 
 ## Retina JPG export recipe (2160×2880)
-The preview iframe is ~924×540, so capture by tiling a true-2× copy:
+**CLI environment (preferred when headless Chrome is available):** serve the project dir (`python3 -m http.server 8123`), capture in one shot with `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --disable-gpu --hide-scrollbars --window-size=1080,1440 --force-device-scale-factor=2 --virtual-time-budget=20000 --user-data-dir=<scratch>/chrome-profile --screenshot=<scratch>/flyer_2x.png http://127.0.0.1:8123/reco_flyer.dc.html` (Chrome may hang after writing the file — the PNG is still valid; kill it and check). Verify 2160×2880 and eyeball the capture (date, fonts loaded, dividers, illustration blend, no overflow), convert to JPEG quality 95 (`sips -s format jpeg -s formatOptions 95`) as `reco_flyer.jpg`, delete the temp PNG and chrome profile.
+
+**Design-canvas environment (no headless Chrome):** the preview iframe is ~924×540, so capture by tiling a true-2× copy:
 1. Make a temp 2× file with a **fresh timestamped name** (never reuse a filename — renders and viewers cache):
    - Double every `px` number: `src.replace(/(\d+(?:\.\d+)?)px/g, (m,n)=>(parseFloat(n)*2)+'px')`
    - Double the icon SVG attrs: `width="32" height="32"` → `width="64" height="64"` (viewBox stays).

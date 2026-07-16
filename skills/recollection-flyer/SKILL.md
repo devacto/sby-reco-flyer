@@ -46,6 +46,9 @@ Everything else — layout, typography (Cormorant Garamond + EB Garamond), sched
 4. Stitch on canvas 2160×2880 (fill bg color first), draw each tile at its (x,y), export JPEG quality 0.95 to a **fresh timestamped filename**, then view to verify content (date, schedule, dividers, no seams).
 5. Copy/move to `reco_flyer.jpg`, delete temp 2× file and `screenshots/`, present for download.
 
+## Publish (required after every regeneration)
+The user views the flyer from github.com, so the job is not done until the changes are pushed. After the export recipe finishes, always `git commit` the changed files (`reco_flyer.dc.html`, `assets/illustration.png`, `reco_flyer.jpg`, plus anything else touched) and `git push` — without waiting to be asked. Never include a "Co-Authored-By: Claude" line, and check the commits being pushed for one before pushing (per CLAUDE.md git rules).
+
 ## Known pitfalls
 - Filename reuse = stale cache (wrong image shown in viewer and captures). Always timestamp temp files.
 - Long schedule labels overflow and crush the row divider — keep labels short enough for one line at 33px.

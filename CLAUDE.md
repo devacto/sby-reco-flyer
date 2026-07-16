@@ -8,6 +8,7 @@ This project produces the monthly "Evening of Recollection" flyer for Surabaya.
 - Everything else — layout, typography (Cormorant Garamond + EB Garamond), schedule, venue, quote — stays fixed unless explicitly requested.
 - Final deliverable is always the retina JPG (2160×2880) via the export recipe in the skill, saved as `reco_flyer.jpg` and presented for download. Regenerate it after ANY change to the flyer (illustration swaps included), not just new-month updates.
 - Temp export files (`screenshots/`, timestamped `Retina *.dc.html` / `Recollection *.jpg`) must be deleted after export.
+- After ANY flyer regeneration (new month, illustration swap, color change, or any edit followed by re-export), always `git commit` and `git push` the results without being asked — the user views the flyer from github.com, so unpushed work is invisible to them. Follow the git rules below when doing so.
 - Design size is fixed at 1080×1440; verify no overflow/wrapping before export (checks listed in the skill).
 
 ## Git rules

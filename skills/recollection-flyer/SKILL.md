@@ -47,7 +47,10 @@ Everything else — layout, typography (Cormorant Garamond + EB Garamond), sched
 5. Copy/move to `reco_flyer.jpg`, delete temp 2× file and `screenshots/`, present for download.
 
 ## Publish (required after every regeneration)
-The user views the flyer from github.com, so the job is not done until the changes are pushed. After the export recipe finishes, always `git commit` the changed files (`reco_flyer.dc.html`, `assets/illustration.png`, `reco_flyer.jpg`, plus anything else touched) and `git push` — without waiting to be asked. Never include a "Co-Authored-By: Claude" line, and check the commits being pushed for one before pushing (per CLAUDE.md git rules).
+The user views the flyer from github.com, so the job is not done until the changes are pushed. After the export recipe finishes, without waiting to be asked:
+1. `git commit` the changed files (`reco_flyer.dc.html`, `assets/illustration.png`, `reco_flyer.jpg`, plus anything else touched).
+2. **Archive the generation** so the user can go back to any previous version: copy the fresh `reco_flyer.jpg` to `archive/YYYYMMDD-HHMM_<illustration-slug>.jpg` (local WIB export time, short kebab-case slug of the illustration scene) and append a row to the table in `archive/LOG.md`: generated time, event date, illustration description, colors, file link, and the hash of the commit from step 1.
+3. `git commit` the archive file + `archive/LOG.md` (e.g. "Archive generation 20260716-1031 (factory-workers)"), then `git push` all commits. Never include a "Co-Authored-By: Claude" line, and check the commits being pushed for one before pushing (per CLAUDE.md git rules).
 
 ## Known pitfalls
 - Filename reuse = stale cache (wrong image shown in viewer and captures). Always timestamp temp files.
